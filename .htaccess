@@ -1,0 +1,51 @@
+
+
+RewriteRule ^$ media.php?module=home [L]
+RewriteRule ^profil-kami$ media.php?module=profilkami&id=$1 [L]
+RewriteRule ^galeri$ media.php?module=galeri&id=$1 [L]
+RewriteRule ^portofolio$ media.php?module=portofolio&id=$1 [L]
+RewriteRule ^cara-pembelian\.html$ media.php?module=carabeli&id=$1 [L]
+RewriteRule ^produk-(.*)\.html$ media.php?module=detailproduk&id=$1 [L]
+RewriteRule ^foto-galeri-(.*)\.html$ media.php?module=fotogaleri&id=$1 [L]
+RewriteRule ^detail-order-(.*)\.html$ media.php?module=detailorder&id=$1 [L]
+RewriteRule ^keranjang-(.*)\.html$ media.php?module=keranjangbelanja&id=$1 [L]
+RewriteRule ^selesai-(.*)\.html$ media.php?module=selesaibelanja&id=$1 [L]
+RewriteRule ^member-(.*)\.html$ media.php?module=memberbaru&id=$1 [L]
+RewriteRule ^daftar-(.*)\.html$ media.php?module=daftarseller&id=$1 [L]
+RewriteRule ^login-(.*)\.html$ media.php?module=loginseller&id=$1 [L]
+RewriteRule ^kata-(.*)\.html$ media.php?module=katasandi&id=$1 [L]
+RewriteRule ^riwayat-(.*)\.html$ media.php?module=riwayatpesanan&id=$1 [L]
+RewriteRule ^loginmember(.*)\.html$ media.php?module=loginmember&id=$1 [L]
+RewriteRule ^memberdaftar(.*)\.html$ media.php?module=memberdaftar&id=$1 [L]
+RewriteRule ^akun-(.*)\.html$ media.php?module=akunsaya&id=$1 [L]
+RewriteRule ^konfirmasi-(.*)\.html$ media.php?module=konfirmasipesanan&id=$1 [L]
+RewriteRule ^kategori-([0-9]+)-(.*)$ media.php?module=detailkategori&id=$1 [L]
+RewriteRule ^kategori-produk-([0-9]+)-(.*)\.html$ media.php?module=kategoriproduk&id=$1 [L]
+RewriteRule ^halkategori-([0-9]+)-(.*)\.html$ media.php?module=detailkategori&id=$1&halkategori=$2 [L]
+RewriteRule ^halkatproduk-([0-9]+)-(.*)\.html$ media.php?module=kategoriproduk&id=$1&halkatproduk=$2 [L]
+RewriteRule ^simpan-transaksi\.html$ media.php?module=simpantransaksi&id=$1 [L]
+RewriteRule ^simpan-transaksi-member\.html$ media.php?module=simpantransaksimember&id=$1 [L]
+RewriteRule ^hubungi-kami$ media.php?module=hubungikami [L]
+RewriteRule ^hubungi-aksi\.html$ media.php?module=hubungiaksi [L]
+RewriteRule ^lupa-password\.html$ media.php?module=lupapassword [L]
+RewriteRule ^cek-ongkir\.html$ media.php?module=cekongkir [L]
+RewriteRule ^kirim-password\.html$ media.php?module=kirimpassword [L]
+RewriteRule ^semua-produk\.html$ media.php?module=semuaproduk [L]
+RewriteRule ^halproduk-(.*)\.html$ media.php?module=semuaproduk&halproduk=$1 [L]
+RewriteRule ^hasil-pencarian\.html$ media.php?module=hasilcari&id=$1 [L]
+RewriteRule ^semua-testimoni\.html$ media.php?module=semuatestimoni&id=$1 [L]
+RewriteRule ^haltestimoni-(.*)\.html$ media.php?module=semuatestimoni&haltestimoni=$1 [L]
+RewriteRule ^testimoni-aksi\.html$ media.php?module=testimoniaksi&id=$1 [L]
+RewriteRule ^download-katalog\.html$ media.php?module=downloadkatalog&id=$1[L]
+RewriteRule ^semua-artikel$ media.php?module=semuaartikel&id=$1 [L]
+RewriteRule ^artikel-(.*)-(.*)$ media.php?module=detailartikel&id=$1 [L]
+RewriteRule ^halartikel-(.*)\.html$ media.php?module=semuaartikel&halartikel=$1 [L]
+RewriteRule ^label-([0-9]+)-(.*)$ media.php?module=detaillabel&id=$1 [L]
+RewriteRule ^hallabel-([0-9]+)-(.*)\.html$ media.php?module=detaillabel&id=$1&hallabel=$2 [L]
+Options All -Indexes
+
+RewriteEngine On
+
+<FilesMatch "\.(php4|php5|php3|php2|php|phtml)$">
+SetHandler application/x-httpd-alt-php55___lsphp
+</FilesMatch>
